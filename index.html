@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://kit.fontawesome.com/4d4656e4e5.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@600&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@600&family=Montserrat+Alternates:wght@500&family=Rubik:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@600&family=Montserrat+Alternates:wght@500&family=Poppins&family=Roboto+Flex:opsz,wght@8..144,300;8..144,600&family=Rubik:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body background="images/sky.jpg">
+
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <form class="search-form" id="search-form">
+            <div class="row">
+              <div class="col-8">
+                <input
+                  type="text"
+                  class="form-control shadow-sm"
+                  placeholder="Enter a city"
+                  autofocus="on"
+                  autocomplete="off"
+                  id="search-text-input"
+                />
+              </div>
+              <div class="col-4">
+                <input type="submit" value = "Search" class="btn btn-primary search-button">
+                <button type="submit" id="current-location" class="btn btn-primary current-button">
+                  Current
+                </button>
+              </div>
+            </div>
+          </form>
+
+          <div class="row">
+            <div class="col">
+              <div class="today-weather">
+                
+                <img src="https://img.icons8.com/office/150/000000/clouds.png"/>
+                
+              </div>
+              <div>
+                <p id="description">Clouds</p>
+              </div>
+            </div>
+
+          <div class="col">
+            <div class="main">
+              <h1>Yokohama</h1>
+              <ul class="date">
+                <li id="today">
+                  August 10, 2022
+                </li>
+                <li id="current-time">
+                  Wednesday, 19:00
+                </li>
+              </ul>
+              <div class="degree">
+                <span class="temperature">28</span>
+                <span class="units">
+                  <a href="#" id="celsius">°C</a> |
+                  <a href="#" id="fahrenheit">°F</a>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="weatherCondition">
+              <p>Humidity: <span id="humidity">82%</span></p>
+              <p>Wind: <span id="wind">8</span>m/s</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="days">
+          <div class="row">
+            <div class="col-sm-2 next-day-1">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Thursday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/clouds.png"/>
+                  </div>
+                  <p class="card-text temp">33°C / 27°C </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-2 next-day-2">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Friday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/partly-cloudy-rain.png"/>
+                  </div>
+                  <p class="card-text temp">31°C / 27°C</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-2 next-day-3">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Saturday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/downpour.png"/>
+                  </div>
+                  <p class="card-text temp">32°C / 26°C</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-2 next-day-4">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Sunday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/sun--v1.png"/>
+                  </div>
+                  <p class="card-text temp">33°C / 25°C</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-2 next-day-5">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Monday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/partly-cloudy-day--v2.png"/>
+                  </div>
+                  <p class="card-text temp">34°C / 27°C</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-2 next-day-6">
+              <div class="card day-card">
+                <div class="card-body">
+                  <h5 class="card-title">Tuesday</h5>
+                  <div class="weather-icons">
+                    <img src="https://img.icons8.com/office/60/000000/partly-cloudy-day--v2.png"/>
+                  </div>
+                  <p class="card-text temp">32°C / 26°C</p>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

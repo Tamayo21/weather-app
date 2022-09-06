@@ -1,0 +1,172 @@
+h1 {
+  color: #1ab2a8;
+  margin-top: 45px;
+  font-family: "Mitr", sans-serif;
+  font-size: 38px;
+}
+
+h1,
+h5,
+ul {
+  text-align: center;
+}
+
+h3,
+h5,
+ul {
+  color: #6c717c;
+}
+
+li {
+  list-style: none;
+  margin-left: -31px;
+}
+
+p,
+a {
+  margin-bottom: 0rem;
+  font-family: "Poppins", sans-serif;
+  color: #6c717c;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1ab2a8;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.card {
+  max-width: fit-content;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 5px 5px 5px rgba(46, 46, 46, 0.1);
+}
+
+#search-form {
+  padding: 20px 18px 20px 50px;
+  margin-right: -12px;
+}
+
+.form-control {
+  margin-top: 5px;
+}
+
+.current-button,
+.search-button {
+  margin-top: 5px;
+  background: #1ab2a8;
+  border-color: #1ab2a8;
+}
+
+.search-button:hover,
+.current-button:hover {
+  background: #189b92;
+  border-color: #189b92;
+}
+
+.search-button {
+  margin-left: -18px;
+}
+
+.today-weather {
+  text-align: center;
+  font-size: 120px;
+  padding-top: 43px;
+  color: #d9d9d9;
+  display: block;
+}
+
+#description {
+  text-align: center;
+  margin-top: -29px;
+}
+
+.date {
+  margin-top: -6px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  color: #6c717c;
+}
+
+.degree {
+  text-align: center;
+  font-size: 65px;
+  font-family: "Montserrat Alternates", sans-serif;
+  margin-top: -19px;
+}
+
+.temperature {
+  margin-right: -13px;
+}
+
+.units {
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  color: #6c717c;
+  position: relative;
+  top: -29px;
+}
+
+.weatherCondition {
+  padding-top: 162px;
+}
+
+.card-text {
+  text-align: center;
+  color: #6c717c;
+  font-size: 13px;
+}
+
+.weather-icons {
+  text-align: center;
+  font-size: 60px;
+}
+
+.days {
+  display: block;
+  margin: 0 auto;
+}
+
+.day-card {
+  max-width: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 13.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+.temp {
+  font-size: 12px;
+}
+
+.next-day-1 {
+  margin-left: 25px;
+  margin-right: -10px;
+}
+
+.next-day-2 {
+  margin-right: -10px;
+}
+
+.next-day-3 {
+  margin-left: 0px;
+  margin-right: -10px;
+}
+
+.next-day-4 {
+  margin-right: -10px;
+}
+
+.next-day-5 {
+  margin-right: -10px;
+}
