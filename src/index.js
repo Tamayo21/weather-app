@@ -56,17 +56,23 @@ console.log(formatDate(currentTime));
 function showLocationTemperature(response) {
   let temperature = Math.round(response.data.main.temp);
   let showTemperature = document.querySelector("span.temperature");
-  showTemperature.innerHTML = temperature;
-
   let showLocation = document.querySelector("h1");
-  showLocation.innerHTML = response.data.name;
+  let iconElement = document.querySelector("#icon");
 
+  showTemperature.innerHTML = temperature;
+  showLocation.innerHTML = response.data.name;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
+
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchLocation(event) {

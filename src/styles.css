@@ -57,20 +57,20 @@ a:hover {
   margin-top: 5px;
 }
 
-.current-button,
-.search-button {
+#search-button,
+#current-location {
   margin-top: 5px;
   background: #1ab2a8;
   border-color: #1ab2a8;
 }
 
-.search-button:hover,
-.current-button:hover {
+#search-button:hover,
+#current-location:hover {
   background: #189b92;
   border-color: #189b92;
 }
 
-.search-button {
+#search-button {
   margin-left: -18px;
 }
 
@@ -169,12 +169,4 @@ a:hover {
 
 .next-day-5 {
   margin-right: -10px;
-}
-
-.footer {
-  text-align: center;
-  font-size: 13.5px;
-  font-family: "Poppins", sans-serif;
-  margin-top: 10px;
-  text-shadow: white;
 }
