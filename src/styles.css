@@ -31,10 +31,11 @@ a {
 
 a {
   text-decoration: none;
+  color: #1ab2a8;
 }
 
 a:hover {
-  color: #1ab2a8;
+  color: #189b92;
 }
 
 .container {
@@ -178,4 +179,12 @@ a:hover {
 
 .next-day-5 {
   margin-right: -10px;
+}
+
+.footer {
+  text-align: center;
+  font-size: 13.5px;
+  font-family: "Poppins", sans-serif;
+  margin-top: 10px;
+  text-shadow: white;
 }
