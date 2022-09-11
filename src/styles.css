@@ -102,6 +102,15 @@ a:hover {
   margin-top: -19px;
 }
 
+.degree .active {
+  color: black;
+  cursor: default;
+}
+
+.degree .active:hover {
+  text-decoration: none;
+}
+
 .temperature {
   margin-right: -13px;
 }
