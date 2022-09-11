@@ -54,7 +54,8 @@ function formatDate(date) {
 console.log(formatDate(currentTime));
 
 function showLocationTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
+  let temperature = Math.round(celsiusTemperature);
   let showTemperature = document.querySelector("span.temperature");
   let showLocation = document.querySelector("h1");
   let iconElement = document.querySelector("#icon");
@@ -134,3 +135,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 
 let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", convertToCelsius);
+
+search("Yokohama");
