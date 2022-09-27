@@ -139,11 +139,6 @@ a:hover {
   margin-top: -22px;
 }
 
-.days {
-  display: block;
-  margin: 0 auto;
-}
-
 .day-card {
   max-width: fit-content;
   margin-top: 20px;
