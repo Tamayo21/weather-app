@@ -136,6 +136,7 @@ a:hover {
 .weather-icons {
   text-align: center;
   font-size: 60px;
+  margin-top: -22px;
 }
 
 .days {
@@ -144,14 +145,16 @@ a:hover {
 }
 
 .day-card {
-  max-width: none;
+  max-width: fit-content;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-.card-title {
+.weather-forecast-date {
   font-size: 13.5px;
   font-family: "Poppins", sans-serif;
+  color: #6c717c;
+  text-align: center;
 }
 
 .temp {
