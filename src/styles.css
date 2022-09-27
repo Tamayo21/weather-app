@@ -144,7 +144,7 @@ a:hover {
 }
 
 .day-card {
-  max-width: fit-content;
+  max-width: none;
   margin-top: 20px;
   margin-bottom: 20px;
 }
