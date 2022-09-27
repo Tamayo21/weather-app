@@ -133,14 +133,20 @@ function showLocationTemperature(response) {
 
 function searchLocation(event) {
   event.preventDefault();
-  let location = document.querySelector("#search-text-input").value;
+  let city = document.querySelector("#search-text-input").value;
+  searchCity(city);
+}
+
+function searchCity(city) {
   let apiKey = "fe028dd951e1dd63d22f0a02e9c65071";
   let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
   let units = "metric";
-  let apiUrl = `${apiEndpoint}q=${location}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${apiEndpoint}q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(`${apiUrl}&appid=${apiKey}`).then(showLocationTemperature);
 }
+
+searchCity("Yokohama");
 
 let searchEngine = document.querySelector("#search-form");
 searchEngine.addEventListener("submit", searchLocation);
