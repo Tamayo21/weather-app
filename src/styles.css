@@ -87,6 +87,10 @@ a:hover {
   margin-top: -53px;
 }
 
+.main {
+  margin-left: -53px;
+}
+
 .date {
   margin-top: -6px;
   font-family: "Poppins", sans-serif;
