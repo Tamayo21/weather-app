@@ -77,18 +77,17 @@ a:hover {
 .today-weather {
   text-align: center;
   font-size: 120px;
-  padding-top: -33px;
   color: #d9d9d9;
   display: block;
 }
 
 #description {
   text-align: center;
-  margin-top: -53px;
+  margin-top: -33px;
 }
 
 .main {
-  margin-left: -53px;
+  margin-left: -41px;
 }
 
 .date {

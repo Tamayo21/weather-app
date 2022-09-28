@@ -1,3 +1,5 @@
+// date
+
 let currentTime = new Date();
 
 function formatDate(date) {
@@ -53,6 +55,49 @@ function formatDate(date) {
 
 console.log(formatDate(currentTime));
 
+// handle images
+
+function displayImage(icon) {
+  let iconPath = "";
+  if (icon === `01d`) {
+    iconPath = "images/01d.svg";
+  } else if (icon === `01n`) {
+    iconPath = "images/01n.svg";
+  } else if (icon === `02d`) {
+    iconPath = "images/02d.svg";
+  } else if (icon === `02n`) {
+    iconPath = "images/02n.svg";
+  } else if (icon === `03d` || icon === `03n`) {
+    iconPath = "images/03d.svg";
+  } else if (icon === `04d` || icon === `04n`) {
+    iconPath = "images/04d.svg";
+  } else if (icon === `09d` || icon === `09n`) {
+    iconPath = "images/09d.svg";
+  } else if (icon === `10d`) {
+    iconPath = "images/10d.svg";
+  } else if (icon === `10n`) {
+    iconPath = "images/10n.svg";
+  } else if (icon === `11d`) {
+    iconPath = "images/11d.svg";
+  } else if (icon === `11n`) {
+    iconPath = "images/11n.svg";
+  } else if (icon === `13d`) {
+    iconPath = "images/13d.svg";
+  } else if (icon === `13n`) {
+    iconPath = "images/13n.svg";
+  } else if (icon === `50d`) {
+    iconPath = "images/50d.svg";
+  } else if (icon === `50n`) {
+    iconPath = "images/50n.svg";
+  } else {
+    iconPath = "images/01d.svg";
+  }
+
+  return iconPath;
+}
+
+// forecast
+
 function formatDay(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -79,9 +124,7 @@ function displayForecast(response) {
             )}</div>
             <div class="weather-icons">
             <img
-            src="http://openweathermap.org/img/wn/${
-              forecastDay.weather[0].icon
-            }@2x.png"
+            src="${displayImage(forecastDay.weather[0].icon)}"
           alt=""
           width="70"
           />
@@ -117,12 +160,15 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+//current weather
+
 function showLocationTemperature(response) {
   celsiusTemperature = response.data.main.temp;
   let temperature = Math.round(celsiusTemperature);
   let showTemperature = document.querySelector("span.temperature");
   let showLocation = document.querySelector("h1");
   let iconElement = document.querySelector("#icon");
+  let iconResponse = response.data.weather[0].icon;
 
   showTemperature.innerHTML = temperature;
   showLocation.innerHTML = response.data.name;
@@ -133,10 +179,7 @@ function showLocationTemperature(response) {
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 
-  iconElement.setAttribute(
-    "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", displayImage(iconResponse));
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
