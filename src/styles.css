@@ -50,7 +50,6 @@ a:hover {
 
 #search-form {
   padding: 20px 18px 20px 50px;
-  margin-right: -12px;
 }
 
 .form-control {
@@ -84,10 +83,6 @@ a:hover {
 #description {
   text-align: center;
   margin-top: -33px;
-}
-
-.main {
-  margin-left: -41px;
 }
 
 .date {
@@ -128,6 +123,7 @@ a:hover {
 
 .weatherCondition {
   padding-top: 162px;
+  text-align: center;
 }
 
 .card-text {
