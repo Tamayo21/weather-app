@@ -123,7 +123,7 @@ a:hover {
 
 .weatherCondition {
   padding-top: 162px;
-  text-align: center;
+  text-align: left;
 }
 
 .card-text {
@@ -161,4 +161,14 @@ a:hover {
   font-family: "Poppins", sans-serif;
   margin-top: 10px;
   text-shadow: white;
+}
+
+@media (max-width: 770px) {
+  #search-button {
+    margin-left: 0px;
+  }
+  .weatherCondition {
+    padding-top: 0px;
+    text-align: center;
+  }
 }
